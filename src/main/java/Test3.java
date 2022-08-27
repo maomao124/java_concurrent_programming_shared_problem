@@ -42,6 +42,9 @@ public class Test3
             }
         }, "t2");
 
+        t1.start();
+        t2.start();
+
         t1.join();
         t2.join();
         //打印

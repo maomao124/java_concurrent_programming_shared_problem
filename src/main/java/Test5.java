@@ -1,21 +1,21 @@
 /**
  * Project name(项目名称)：java并发编程_共享问题
  * Package(包名): PACKAGE_NAME
- * Class(类名): Test4
+ * Class(类名): Test5
  * Author(作者）: mao
  * Author QQ：1296193245
  * GitHub：https://github.com/maomao124/
  * Date(创建日期)： 2022/8/27
- * Time(创建时间)： 22:18
+ * Time(创建时间)： 22:24
  * Version(版本): 1.0
  * Description(描述)： 无
  */
 
-public class Test4
+public class Test5
 {
     public static void main(String[] args) throws InterruptedException
     {
-        Room2 room = new Room2();
+        Room3 room = new Room3();
 
         Thread t1 = new Thread(new Runnable()
         {
@@ -51,8 +51,7 @@ public class Test4
     }
 }
 
-
-class Room2
+class Room3
 {
     private int value = 0;
 
@@ -65,9 +64,9 @@ class Room2
     }
 
     /**
-     * 减1
+     * 减1，未加同步锁
      */
-    public synchronized void decrement()
+    public void decrement()
     {
         value--;
     }
@@ -82,5 +81,3 @@ class Room2
         return value;
     }
 }
-
-
